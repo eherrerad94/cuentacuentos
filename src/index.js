@@ -14,7 +14,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 mongooseConnection(DB)
-app.use(routes)
+// app.use(routes)
 
 app.listen(PORT, (error) => {
     if(error) {
