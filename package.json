@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon src/index.js --exec babel-node",
     "heroku-postbuild": "npm install",
-    "start": "babel-node src/index.js"
+    "start": "babel-node src/index.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +18,8 @@
     "body-parser": "^1.18.2",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
-    "mongoose": "^5.0.17"
+    "mongoose": "^5.0.17",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -27,5 +30,6 @@
   "engines": {
     "node": "8.4.0",
     "npm": ">=5.0.0"
-  }
+  },
+  "snyk": true
 }
